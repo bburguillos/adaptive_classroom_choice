@@ -109,6 +109,25 @@ def compatible(mode,materials,minutes,strict_mode=False):
     if materials: items=[x for x in items if set(x["materials"]).issubset(set(materials))]
     return items
 
+def extension_options(item):
+    task_id=item["id"]
+    title=item["title"]
+    if any(word in task_id for word in ["dice","score","high_card"]):
+        return [item["hard"],"Complete 5 more rounds and add the new results to the same recording page.","Compare the first set with the second set and circle what changed."]
+    if any(word in task_id for word in ["card","number_line","sticky_line"]):
+        return [item["hard"],"Mix the cards or notes and complete the activity a second time without looking at the first arrangement.","Have the student give the adult directions for putting the numbers in the correct order."]
+    if "clay" in task_id or task_id=="emotion_faces":
+        return [item["hard"],"Make a second set using different sizes, shapes, letters, or numbers.","Draw and label the finished clay models on paper before putting the clay away."]
+    if any(word in task_id for word in ["measure","paper_strips","book_sort","pencil_sort"]):
+        return [item["hard"],"Choose 3 additional classroom objects and add them to the comparison.","Put every result in order and find the difference between the smallest and largest measurement."]
+    if any(word in task_id for word in ["sort","graph","frequency","tally","categories","folder","coin"]):
+        return [item["hard"],"Repeat the activity with a new set of 10 objects or a new category rule.","Use the completed counts to make a two-column comparison or a simple bar graph."]
+    if any(word in task_id for word in ["block","counter","groups","ten_frame","eraser","more_less","roll_build"]):
+        return [item["hard"],"Repeat the task with 5 more objects or with one additional group.","Draw the completed model and write the number represented by each group."]
+    if any(word in task_id for word in ["draw","trace","path","shape","pattern","collage","number_trace","target","picture"]):
+        return [item["hard"],"Make a second page using different colors, shapes, numbers, or directions.","Ask the student to point to each part and tell, sign, or show the adult what was completed."]
+    return [item["hard"],f"Repeat “{title}” with a new set of numbers, colors, or classroom objects.","Let the student teach the adult how to complete one part of the activity."]
+
 def card(item,n):
     preview="".join(f"<li>{step}</li>" for step in item["steps"][:3])
     return f"<div class='choice'><span class='pill'>{item['minutes']} min</span><h3>{n}. {item['title']}</h3><p><b>Get:</b> {', '.join(item['materials'])}</p><p><b>Start by doing this:</b></p><ol>{preview}</ol><p><b>Finished when:</b> {item['finish']}</p></div>"
@@ -162,9 +181,15 @@ for n,step in enumerate(selected["steps"],1): st.markdown(f"<div class='step'><b
 st.markdown("### Adult support")
 st.markdown(f"<div class='adult'>{selected['adult']}</div>",unsafe_allow_html=True)
 if show_sports: st.info(f"🏅 Optional connection: {selected['link']}")
-with st.expander("Adjust the task without changing the student’s choice"):
-    st.write(f"**Make it easier:** {selected['easy']}")
-    st.write(f"**Add challenge:** {selected['hard']}")
+st.markdown("### Adult pacing and adaptations")
+st.info("**Suggested 15–20 minute plan:** 2–3 minutes to gather materials and model the task, 8–10 minutes for the main activity, and 5–8 minutes for an extension or a second round.")
+with st.expander("Adjust the level or add time",expanded=True):
+    st.write(f"**If the task is too much today:** {selected['easy']}")
+    st.write("**If the task is a good fit:** Complete the numbered steps, check the finished work together, and have the student point to or show one completed part.")
+    st.write(f"**If the student is ready for a higher level:** {selected['hard']}")
+    st.write("**If the student finishes early, choose one or more:**")
+    for option in extension_options(selected):
+        st.write(f"- {option}")
 
 st.markdown("### Quick check-in")
 status=st.radio("How did it go?",["Not started","Working","Finished","Needed a break"],horizontal=True)
