@@ -200,7 +200,15 @@ st.markdown("### Student choice")
 st.write("Choose one of the activities below. You can change your mind before starting.")
 suggested_difficulty={"Regulate & Focus":0,"Participate":0,"Practice":1,"Stretch":2}[mode]
 task_version=st.sidebar.radio("Task difficulty for today",["Easier","Standard","Challenge"],index=suggested_difficulty,key=f"task_version_{mode}",help="This changes the task demand without labeling the student.")
-today_styles=st.sidebar.multiselect("Today’s activity style",STYLE_OPTIONS,default=STYLE_OPTIONS,help="Choose one or more for today. Selecting all three gives the student a mixed set of choices.")
+today_styles=st.sidebar.multiselect("Today’s activity style — required",STYLE_OPTIONS,default=[],help="The aide or teacher must choose at least one style before tasks appear. Choose multiple styles for a mixed set.")
+if not today_styles:
+    st.info("👩‍🏫 Adult setup: Select at least one **Today’s activity style** in the sidebar before student task choices appear.")
+    st.stop()
+style_signature=(mode,tuple(sorted(today_styles)))
+if st.session_state.get("style_signature")!=style_signature:
+    st.session_state.style_signature=style_signature
+    st.session_state.pop("selected",None)
+    st.session_state.seed=random.randrange(100000)
 strict_mode=st.sidebar.checkbox("Only show tasks originally designed for this readiness mode",value=False,help="Leave this off for the largest variety. Turn it on when you want a narrower list.")
 materials=st.sidebar.multiselect("Only show tasks using these materials (optional)",all_materials,default=[],key="material_filter",help="Leave this empty to see every task for the selected readiness mode.")
 options=compatible(mode,materials,minutes,strict_mode)
