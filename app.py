@@ -100,6 +100,18 @@ TASKS = [
  detailed(t("number_collage","Make a Number 10 Collage",["Participate","Practice"],["paper","markers","sticky notes","glue"],20,"Represent one number in several ways",["Write a large 10 in the center of the paper.","Draw 10 dots in one corner.","Place 10 sticky notes around the number.","Make 2 groups of 5 marks.","Write TEN at the bottom."],"Adult prepares the large number and counts each group aloud.","Use the number 5 with 5 dots and 5 notes.","Add an addition sentence that equals 10.","This is finished when the page shows 10 as a numeral, word, dots, notes, and groups.")),
  detailed(t("score_compare","Compare 8 Simple Scores",["Practice","Stretch"],["paper","pencils","playing cards"],20,"Compare numbers using a sports theme",["Draw 8 rows with TEAM A and TEAM B.","Turn over 2 number cards for Row 1.","Write one score under each team.","Circle the greater score.","Repeat for all 8 rows."],"Use cards 1 through 5 and read both scores aloud.","Complete 4 rows.","Write the score difference in every row.","This is finished when 8 score pairs are recorded and every greater score is circled.")),
  detailed(t("paper_scoreboard","Build a Paper Scoreboard",["Participate","Practice","Stretch"],["paper","pencils","markers","dice"],20,"Record changing totals",["Write HOME and AWAY at the top of paper.","Start both scores at 0.","Roll the die for HOME and add that number.","Roll for AWAY and add that number.","Record 5 rounds and circle the final winner."],"Use tally marks instead of addition and count at the end.","Complete 3 rounds using tallies.","Find the winning margin after 5 rounds.","This is finished when 5 rounds and both final scores are recorded.")),
+ detailed(t("design_jersey","Design a Paper Jersey",["Participate","Practice","Stretch"],["paper","pencils","crayons","markers"],20,"Create a design using colors, numbers, and shapes",["Adult draws a large T-shirt shape on paper.","Choose 2 colors for the jersey.","Choose 1 number and write it in the center.","Add 3 shapes as decorations.","Color the entire jersey and show the finished design."],"Offer two colors and two numbers to choose from.","Use one color, one number, and one shape.","Create a matching front and back with a name and number.","This is finished when the jersey has 2 colors, 1 number, and 3 shapes.")),
+ detailed(t("pattern_flag","Create a Pattern Flag",["Participate","Practice","Stretch"],["paper","pencils","crayons","markers"],20,"Create and repeat a visual pattern",["Adult draws a large rectangle for the flag.","Choose 2 colors.","Draw a stripe in Color 1 and then Color 2.","Repeat the two-color pattern across the flag.","Add one large shape in the center."],"Start the first two stripes and let the student copy them.","Make 4 wide stripes using 2 colors.","Use a 3-color ABC pattern and add a symbol.","This is finished when the flag contains a repeated color pattern and one center shape.")),
+ detailed(t("four_box_comic","Draw a 4-Box Classroom Comic",["Practice","Stretch"],["paper","pencils","crayons"],20,"Create a simple visual story in order",["Fold or divide paper into 4 boxes.","Draw a character entering class in Box 1.","Draw the character choosing a task in Box 2.","Draw the character working in Box 3.","Draw the character finishing in Box 4."],"Accept stick figures and let the adult describe each box first.","Use 2 boxes: start and finish.","Add one speech bubble or short sentence to every box.","This is finished when the 4 drawings show a clear beginning, middle, and ending.")),
+ detailed(t("color_number_grid","Color a Number Grid",["Regulate & Focus","Participate","Practice"],["paper","pencils","crayons"],20,"Follow a color key and complete a design",["Adult draws a 4-by-4 grid and writes 1, 2, or 3 in every box.","Make a key: 1 is red, 2 is blue, and 3 is yellow.","Find one numbered box at a time.","Color each box using the key.","Check that all 16 boxes are colored."],"Use a 3-by-3 grid with numbers 1 and 2.","Color 9 boxes using 2 colors.","Create a new color key and grid for the adult to complete.","This is finished when every numbered box matches the color key.")),
+ detailed(t("block_maze","Build a Block Path Through a Maze",["Participate","Practice","Stretch"],["blocks","paper","pencils"],20,"Plan and build a path from start to finish",["Adult draws a large START dot and FINISH star on paper.","Place 6 blocks between the dot and star as obstacles.","Use 10 more blocks to make a path around the obstacles.","Move one small block along the path from START to FINISH.","Draw the finished path."],"Use 3 obstacles and let the adult begin the path.","Build one clear path around 3 blocks.","Build a second, shorter path and compare the two.","This is finished when a block can travel from START to FINISH without touching an obstacle.")),
+ detailed(t("clay_scene","Build a Clay Classroom Scene",["Participate","Practice","Stretch"],["clay or Play-Doh","paper","pencils"],20,"Build and describe a familiar scene",["Make 1 clay person.","Make 1 clay table.","Make 1 clay chair.","Place the person beside the table and chair.","Draw the scene on paper and point to each object."],"Adult makes one model object first.","Make a person and one classroom object.","Add 3 more objects and describe where each one is located.","This is finished when the scene contains a person, table, chair, and matching drawing.")),
+ detailed(t("counter_picture","Make a Picture with 20 Counters",["Regulate & Focus","Participate","Practice"],["counters","paper","pencils"],20,"Arrange objects to create a recognizable picture",["Get exactly 20 counters.","Choose to make a face, flower, house, or number.","Arrange all 20 counters on paper to make the picture.","Trace around several counters with a pencil.","Count the counters again before cleaning up."],"Offer two picture choices and begin the outline.","Use 10 counters to make a simple face.","Make a second picture using the same 20 counters in a new arrangement.","This is finished when all 20 counters form one recognizable picture and are recounted.")),
+ detailed(t("paper_chain_pattern","Make a 12-Link Paper Pattern",["Participate","Practice"],["paper","scissors","crayons","glue"],20,"Create a tactile repeating pattern",["Adult cuts 12 paper strips.","Color 6 strips red and 6 strips blue.","Make one red strip into a loop and glue it.","Place a blue strip through the loop and glue it.","Continue red-blue until all 12 links are connected."],"Adult cuts and starts the first two links.","Make a 6-link chain.","Use 3 colors in an ABC pattern.","This is finished when 12 links form one red-blue repeating chain.")),
+ detailed(t("make_ten_cards","Find 8 Card Pairs That Make 10",["Practice","Stretch"],["playing cards","paper","pencils"],20,"Use addition combinations strategically",["Remove face cards and use A as 1.","Place number cards face up.","Find 2 cards that add to 10.","Write the addition sentence on paper.","Continue until 8 pairs have been found and recorded."],"Provide one example such as 4 and 6.","Find 4 pairs that make 10.","Find pairs that make 12 or use 3 cards to make 10.","This is finished when 8 correct pairs and equations are recorded.")),
+ detailed(t("grid_route","Plan the Shortest Grid Route",["Practice","Stretch"],["paper","pencils","counters"],20,"Plan, test, and compare routes",["Adult draws a 5-by-5 grid with START in the bottom-left and FINISH in the top-right.","Place 5 counters on squares as blocked spaces.","Draw a route that moves only up, down, left, or right.","Count the squares in the route.","Try a second route and circle the shorter one."],"Use a 3-by-3 grid with 1 blocked square.","Draw one working route.","Create a maze for the adult and check the adult's route.","This is finished when two valid routes are counted and the shorter route is circled.")),
+ detailed(t("tower_rule","Solve 6 Block Tower Rules",["Practice","Stretch"],["blocks","paper","pencils"],20,"Use clues to build the correct tower",["Adult gives Rule 1: build a tower taller than 3 blocks but shorter than 6.","Build one tower that follows the rule.","Draw it and write its height.","Complete 5 more adult-given rules.","Check every tower against its rule."],"Use rules with one condition, such as build exactly 3.","Complete 3 simple rules.","Have the student write 3 tower rules for the adult.","This is finished when 6 towers are built, drawn, and checked against 6 rules.")),
+ detailed(t("pattern_detective","Be a Pattern Detective",["Practice","Stretch"],["paper","pencils","crayons"],20,"Identify and explain pattern rules",["Adult draws 6 patterns with one mistake in each.","Look at Pattern 1 and circle the item that breaks the rule.","Draw the correct item above it.","Repeat for all 6 patterns.","Tell or show the rule for one pattern."],"Use simple AB patterns and point to two possible answers.","Correct 3 AB patterns.","Create 3 mistake patterns for the adult to solve.","This is finished when all 6 mistakes are circled and corrected.")),
 ]
 
 MODE_INFO={"Regulate & Focus":"Short, calm tasks for attention, communication, and readiness.","Participate":"Simple hands-on tasks with choices and adult guidance.","Practice":"Academic or classroom-skill practice with a clear product.","Stretch":"More independent, multi-step tasks with optional sports/math connections."}
@@ -150,10 +162,30 @@ def task_visual(item):
     if "paper" in materials or "pencils" in materials: return "📄 ✏️ 🖍️"
     return "🧩 ⭐ ✅"
 
+STYLE_OPTIONS=["Creative","Tactile / Hands-On","Strategic / Problem-Solving"]
+
+def task_styles(item):
+    task_id=item["id"]
+    materials=set(item["materials"])
+    styles=[]
+    creative_words=["draw","color","clay","collage","design","flag","comic","picture","shape","pattern","trace","path","jersey","scene"]
+    tactile_materials={"clay or Play-Doh","blocks","counters","buttons or counters","erasers or counters","playing cards","dice","sticky notes","coins","classroom objects","scissors","glue"}
+    strategic_words=["dice","card","score","compare","graph","frequency","tally","sort","measure","groups","ten_frame","route","rule","detective","order","sequence","maze","make_ten"]
+    if any(word in task_id for word in creative_words) or {"crayons","markers"}&materials:
+        styles.append("Creative")
+    if materials&tactile_materials or any(word in task_id for word in ["build","counter","block","clay","sort","chain"]):
+        styles.append("Tactile / Hands-On")
+    if any(word in task_id for word in strategic_words) or item["goal"].lower().find("plan")>=0:
+        styles.append("Strategic / Problem-Solving")
+    if not styles:
+        styles.append("Creative")
+    return [style for style in STYLE_OPTIONS if style in styles]
+
 def card(item,n):
     preview="".join(f"<li>{step}</li>" for step in item["steps"][:3])
     visual=task_visual(item)
-    return f"<div class='choice'><div class='task-visual' role='img' aria-label='Picture clue for {item['title']}'>{visual}</div><span class='pill'>{item['minutes']} min</span><h3>{n}. {item['title']}</h3><p><b>Get:</b> {', '.join(item['materials'])}</p><p><b>Start by doing this:</b></p><ol>{preview}</ol><p><b>Finished when:</b> {item['finish']}</p></div>"
+    style_pills="".join(f"<span class='pill'>{style}</span>" for style in task_styles(item))
+    return f"<div class='choice'><div class='task-visual' role='img' aria-label='Picture clue for {item['title']}'>{visual}</div><span class='pill'>{item['minutes']} min</span>{style_pills}<h3>{n}. {item['title']}</h3><p><b>Get:</b> {', '.join(item['materials'])}</p><p><b>Start by doing this:</b></p><ol>{preview}</ol><p><b>Finished when:</b> {item['finish']}</p></div>"
 
 st.markdown("<div class='hero'><h1>🧩 Ready, Set, Choose!</h1><p>A flexible classroom activity tool for choosing a task that fits today.</p><p>The adult chooses the readiness mode. The student still gets meaningful choices.</p></div>",unsafe_allow_html=True)
 st.sidebar.header("👩‍🏫 Adult Setup")
@@ -168,9 +200,12 @@ st.markdown("### Student choice")
 st.write("Choose one of the activities below. You can change your mind before starting.")
 suggested_difficulty={"Regulate & Focus":0,"Participate":0,"Practice":1,"Stretch":2}[mode]
 task_version=st.sidebar.radio("Task difficulty for today",["Easier","Standard","Challenge"],index=suggested_difficulty,key=f"task_version_{mode}",help="This changes the task demand without labeling the student.")
+today_styles=st.sidebar.multiselect("Today’s activity style",STYLE_OPTIONS,default=STYLE_OPTIONS,help="Choose one or more for today. Selecting all three gives the student a mixed set of choices.")
 strict_mode=st.sidebar.checkbox("Only show tasks originally designed for this readiness mode",value=False,help="Leave this off for the largest variety. Turn it on when you want a narrower list.")
 materials=st.sidebar.multiselect("Only show tasks using these materials (optional)",all_materials,default=[],key="material_filter",help="Leave this empty to see every task for the selected readiness mode.")
 options=compatible(mode,materials,minutes,strict_mode)
+if today_styles:
+    options=[item for item in options if set(task_styles(item))&set(today_styles)]
 if not options:
     st.warning("No tasks match every selected filter. Add a material or increase the time.")
     st.stop()
@@ -192,7 +227,7 @@ if selected is None:
     st.info("Choose an activity to see the directions.")
     st.stop()
 st.markdown("---")
-st.markdown(f"<div class='panel'><div class='task-visual' role='img' aria-label='Picture clue for {selected['title']}'>{task_visual(selected)}</div><h2>✅ {selected['title']}</h2><p><b>Goal:</b> {selected['goal']}</p><p><b>Materials:</b> {', '.join(selected['materials'])}</p><p><b>You are finished when:</b> {selected['finish']}</p></div>",unsafe_allow_html=True)
+st.markdown(f"<div class='panel'><div class='task-visual' role='img' aria-label='Picture clue for {selected['title']}'>{task_visual(selected)}</div><h2>✅ {selected['title']}</h2><p><b>Activity style:</b> {', '.join(task_styles(selected))}</p><p><b>Goal:</b> {selected['goal']}</p><p><b>Materials:</b> {', '.join(selected['materials'])}</p><p><b>You are finished when:</b> {selected['finish']}</p></div>",unsafe_allow_html=True)
 if task_version=="Easier":
     st.success(f"**Use the easier version today:** {selected['easy']}")
 elif task_version=="Challenge":
