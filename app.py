@@ -42,7 +42,12 @@ TASKS=[
 
 # The first bank above contains reusable prototypes. This student-facing bank
 # replaces vague directions with concrete quantities, materials, and finish lines.
-def detailed(item, finish):
+def detailed(item, finish=None):
+    # Detailed tasks store their completion sentence in the final `t()` field.
+    # Accepting it here keeps every task entry compact and prevents deployment errors.
+    if finish is None:
+        finish = item["link"]
+        item["link"] = "Use sports colors, scores, or team names only if that helps motivate the student."
     item["finish"] = finish
     return item
 
