@@ -6,7 +6,7 @@ st.set_page_config(page_title="Ready, Set, Choose!", page_icon="🧩", layout="w
 
 st.markdown("""
 <style>
-:root{color-scheme:light!important}.stApp{background:linear-gradient(180deg,#fffaf2,#eef7ff);color:#172033}.block-container{max-width:1150px;padding-top:1.4rem}h1,h2,h3{color:#173b65!important}.stApp p,.stApp li,.stApp label,.stApp [data-testid="stMarkdownContainer"],.stApp [data-testid="stWidgetLabel"] p{color:#172033!important}.hero,.panel,.choice{background:#fff;border:2px solid #93c5fd;border-radius:18px;padding:18px;box-shadow:0 7px 20px #1e40af14}.choice{min-height:205px;border-color:#c7d2fe}.choice h3{color:#174a7e!important}.pill{display:inline-block;border-radius:999px;background:#e0f2fe;color:#075985;padding:.2rem .55rem;margin:.12rem .15rem;font-size:.78rem;font-weight:800}.step{background:#eff6ff;border-left:5px solid #2563eb;border-radius:9px;padding:10px 13px;margin:8px 0}.adult{background:#fff7ed;border:2px solid #fdba74;border-radius:13px;padding:12px 14px}
+:root{color-scheme:light!important}.stApp{background:linear-gradient(180deg,#fffaf2,#eef7ff);color:#172033}.block-container{max-width:1150px;padding-top:1.4rem}h1,h2,h3{color:#173b65!important}.stApp p,.stApp li,.stApp label,.stApp [data-testid="stMarkdownContainer"],.stApp [data-testid="stWidgetLabel"] p{color:#172033!important}.hero,.panel,.choice{background:#fff;border:2px solid #93c5fd;border-radius:18px;padding:18px;box-shadow:0 7px 20px #1e40af14}.choice{min-height:205px;border-color:#c7d2fe}.choice h3{color:#174a7e!important}.pill{display:inline-block;border-radius:999px;background:#e0f2fe;color:#075985;padding:.2rem .55rem;margin:.12rem .15rem;font-size:.78rem;font-weight:800}.task-visual{display:flex;align-items:center;justify-content:center;min-height:92px;margin:4px 0 12px;border-radius:16px;background:linear-gradient(135deg,#dbeafe,#fef3c7);border:2px solid #bfdbfe;font-size:3.25rem;letter-spacing:.2rem}.panel .task-visual{max-width:420px;min-height:110px;font-size:4rem}.step{background:#eff6ff;border-left:5px solid #2563eb;border-radius:9px;padding:10px 13px;margin:8px 0}.adult{background:#fff7ed;border:2px solid #fdba74;border-radius:13px;padding:12px 14px}
 </style>""", unsafe_allow_html=True)
 
 def t(i,title,modes,materials,mins,goal,steps,adult,easy,hard,link):
@@ -128,9 +128,32 @@ def extension_options(item):
         return [item["hard"],"Make a second page using different colors, shapes, numbers, or directions.","Ask the student to point to each part and tell, sign, or show the adult what was completed."]
     return [item["hard"],f"Repeat “{title}” with a new set of numbers, colors, or classroom objects.","Let the student teach the adult how to complete one part of the activity."]
 
+def task_visual(item):
+    task_id=item["id"]
+    materials=set(item["materials"])
+    if "dice" in task_id or "score" in task_id or task_id=="roll_build": return "🎲 ✏️ 🔢"
+    if "clay" in task_id or task_id=="emotion_faces": return "🟠 🔺 🙂"
+    if "card" in task_id or task_id in {"red_black","high_card"}: return "🃏 1️⃣ 2️⃣"
+    if "measure" in task_id or task_id in {"paper_strips","book_sort","pencil_sort"}: return "📏 ✏️ ↔️"
+    if "graph" in task_id or "frequency" in task_id or "tally" in task_id or "folder" in task_id: return "📊 ✏️ ✅"
+    if "sort" in task_id or "categories" in task_id or "coin" in task_id: return "🔴 🔵 🟡"
+    if "block" in task_id or "blocks" in materials: return "🧱 1️⃣ 2️⃣"
+    if "counter" in task_id or "groups" in task_id or "ten_frame" in task_id or "eraser" in task_id: return "🔵 🔵 🔵"
+    if "pattern" in task_id: return "🔴 🔵 🔴 🔵"
+    if "path" in task_id: return "● 〰️ ⭐"
+    if "choice" in task_id or "collage" in task_id: return "🎨 🔢 ❤️"
+    if "shape" in task_id or "target" in task_id: return "🔵 🟥 🔺"
+    if "number" in task_id or "dot" in task_id or "sticky_line" in task_id: return "1️⃣ 2️⃣ 3️⃣"
+    if "sequence" in task_id or "picture" in task_id: return "1️⃣ ➡️ 2️⃣ ➡️ 3️⃣"
+    if "draw" in task_id or "trace" in task_id: return "✏️ 🖍️ 📄"
+    if "reset" in task_id or "breathe" in task_id: return "🌬️ 🙂 🌈"
+    if "paper" in materials or "pencils" in materials: return "📄 ✏️ 🖍️"
+    return "🧩 ⭐ ✅"
+
 def card(item,n):
     preview="".join(f"<li>{step}</li>" for step in item["steps"][:3])
-    return f"<div class='choice'><span class='pill'>{item['minutes']} min</span><h3>{n}. {item['title']}</h3><p><b>Get:</b> {', '.join(item['materials'])}</p><p><b>Start by doing this:</b></p><ol>{preview}</ol><p><b>Finished when:</b> {item['finish']}</p></div>"
+    visual=task_visual(item)
+    return f"<div class='choice'><div class='task-visual' role='img' aria-label='Picture clue for {item['title']}'>{visual}</div><span class='pill'>{item['minutes']} min</span><h3>{n}. {item['title']}</h3><p><b>Get:</b> {', '.join(item['materials'])}</p><p><b>Start by doing this:</b></p><ol>{preview}</ol><p><b>Finished when:</b> {item['finish']}</p></div>"
 
 st.markdown("<div class='hero'><h1>🧩 Ready, Set, Choose!</h1><p>A flexible classroom activity tool for choosing a task that fits today.</p><p>The adult chooses the readiness mode. The student still gets meaningful choices.</p></div>",unsafe_allow_html=True)
 st.sidebar.header("👩‍🏫 Adult Setup")
@@ -169,7 +192,7 @@ if selected is None:
     st.info("Choose an activity to see the directions.")
     st.stop()
 st.markdown("---")
-st.markdown(f"<div class='panel'><h2>✅ {selected['title']}</h2><p><b>Goal:</b> {selected['goal']}</p><p><b>Materials:</b> {', '.join(selected['materials'])}</p><p><b>You are finished when:</b> {selected['finish']}</p></div>",unsafe_allow_html=True)
+st.markdown(f"<div class='panel'><div class='task-visual' role='img' aria-label='Picture clue for {selected['title']}'>{task_visual(selected)}</div><h2>✅ {selected['title']}</h2><p><b>Goal:</b> {selected['goal']}</p><p><b>Materials:</b> {', '.join(selected['materials'])}</p><p><b>You are finished when:</b> {selected['finish']}</p></div>",unsafe_allow_html=True)
 if task_version=="Easier":
     st.success(f"**Use the easier version today:** {selected['easy']}")
 elif task_version=="Challenge":
